@@ -1,14 +1,27 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .app {
+  font-family: 'Ubuntu', sans-serif;
   height: 100vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+footer {
+  position:absolute;
+  color: #ffffff;
+  bottom: 0;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
 }
 
 .time-select, .sound-picker, .player-container{
@@ -59,6 +72,7 @@ video {
   border-radius: 5px;
   font-size: 20px;
   transition: all .5 ease;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .time-select button:hover {
@@ -85,3 +99,122 @@ video {
 .sound-picker button img {
   height: 100%;
 }
+
+@media (max-width: 1599px) {
+
+  video {
+    width: auto;
+    height: 100vh;
+  }  
+  .player-container {
+    height: 55%;
+  }
+}
+
+@media (max-width: 799px) {
+
+  video {
+    width: auto;
+    height: 100vh;
+  }
+  
+  .player-container {
+    height: 40%;
+  }
+  .time-select button {
+    width: 40%;
+    height: 6%;
+    font-size: 15px;
+  }
+  .sound-picker button img {
+    height: 35%;
+  }
+  .sound-picker {
+    height: 100%;
+  }
+
+  .sound-picker button {
+    height: 90px;
+    padding: 0;
+    width: 90px;
+  }
+}
+
+@media (max-width: 599px) {
+  .time-select button {
+    width: 50%;
+    height: 5%;
+    font-size: 15px;
+  }
+
+  .player-container {
+    height: 32%;
+  }
+}
+
+@media (max-width: 499px) {
+  .time-select button {
+    width: 60%;
+    height: 8%;
+    font-size: 14px;
+  }
+
+  .player-container {
+    height: 28%
+  }
+
+  .player-container img {
+    height: 28%
+  }
+  .time-display {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 399px) {
+  .time-select button {
+    width: 70%;
+    height: 10%;
+    font-size: 14px;
+  }
+
+  .player-container {
+    height: 25%
+  }
+
+  .player-container img {
+    height: 25%
+  }
+
+  .time-display {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 350px) {
+  .time-select button {
+    width: 70%;
+    height: 6%;
+    font-size: 12px;
+  }
+
+  .player-container {
+    height: 22%
+  }
+
+  .player-container img {
+    height: 22%
+  }
+
+  .time-display {
+    font-size: 25px;
+  }
+}
+
+/* $sp-layout : 'only screen and (min-width: 1920px)';
+$xx-layout : 'only screen and (min-width: 1600px) and (max-width: 1919px)';
+$xlg-layout : 'only screen and (min-width: 1200px) and (max-width: 1599px)';
+$lg-layout : 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md-layout:'only screen and (min-width: 768px) and (max-width: 991px)';
+$sm-layout:'only screen and (max-width: 767px)';
+$xs-layout: 'only screen and (max-width: 575px)'; */
